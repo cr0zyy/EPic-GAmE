@@ -5,18 +5,15 @@ using UnityEngine;
 public class mouselook : MonoBehaviour
 
 {
-    float sensitivity = 6;
-
-    public Transform playerBody;
     float xRotation = 0f;
+    float sensitivity = 6;
+    public Transform playerBody;
 
-    // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * 100f * Time.deltaTime * sensitivity;
